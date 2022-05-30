@@ -1,10 +1,122 @@
 import * as actions from './actionTypes';
 
 const initialState = {
-  questions: [],
+  
   questionLoading: false,
   productsFetching: false,
   products: [],
+  testss: [
+    {
+      id: 1,
+      name: 'Programming test',
+    },
+    {
+      id: 2,
+      name: 'Psychology test',
+    }
+  ],
+  questions: [
+    {
+      testId: 1,
+      id: '1',
+      name: 'Which languages do you study?',
+      answers: [
+        {
+          name: 'HTML',
+          correct: false, 
+        },
+        {
+          name: 'JS',
+          correct: true,
+        },
+        {
+          name: 'CSS',
+          correct: false,
+        }, 
+        {
+          name: 'Java',
+          correct: false,
+        },
+      ]
+    },
+    {
+      id: '2',
+      name: 'What is your name?',
+      answers: [
+        {
+          name: 'HTML',
+          correct: false, 
+        },
+        {
+          name: 'JS',
+          correct: true,
+        },
+        {
+          name: 'CSS',
+          correct: false,
+        }, 
+        {
+          name: 'Java',
+          correct: false,
+        },
+      ]
+    }
+  ],
+
+  tests: [{
+    id: '1',
+    testName: 'Programming test',
+    questions: [
+      {
+        id: '1',
+        name: 'Which languages do you study?',
+        answers: [
+          {
+            name: 'HTML',
+            correct: false, 
+          },
+          {
+            name: 'JS',
+            correct: true,
+          },
+          {
+            name: 'CSS',
+            correct: false,
+          }, 
+          {
+            name: 'Java',
+            correct: false,
+          },
+        ]
+
+      },
+      {
+        id: '2',
+        name: 'What is your name?',
+        answers: [
+          {
+            name: 'HTML',
+            correct: false, 
+          },
+          {
+            name: 'JS',
+            correct: true,
+          },
+          {
+            name: 'CSS',
+            correct: false,
+          }, 
+          {
+            name: 'Java',
+            correct: false,
+          },
+        ]
+
+      }
+    ]
+  },
+
+  ]
 }
 
 export default function reducer(state = initialState, action) {

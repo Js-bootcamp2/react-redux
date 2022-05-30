@@ -10,10 +10,14 @@ function Products({setEditProduct}) {
   const isFetching = useSelector((store => store.productsFetching));
 
 
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(fetchProducts());
+  // }, [dispatch])
 
+  const resetState = () => {
+    
+  }
+  
   const compare = (a, b) => {
     if (a.name > b.name) return 1
     else if(a.name < b.name) return -1
@@ -24,6 +28,12 @@ function Products({setEditProduct}) {
 
   return (
     <div>
+      <Button 
+        onClick={resetState} 
+        type="primary"
+      >
+        Reset state
+      </Button>
      <h1>Products</h1>
      {isFetching && <div>Loading...</div>}
      {!isFetching && <div>
